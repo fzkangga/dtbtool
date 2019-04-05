@@ -1,6 +1,6 @@
 CFLAGS=-O2 -g -Wall
 CC=gcc
-PROGNAME=dtbtool
+PROGNAME=dtbToolLineage
 
 all: dtbtool
 
@@ -8,7 +8,7 @@ all: dtbtool
 	$(CC) $(CFLAGS) -c $<
 
 dtbtool: dtbtool.o
-	$(CC) -g -o dtbtool dtbtool.o
+	$(CC) -g -o $(PROGNAME) dtbtool.o
 
 clean:
-	rm -f *.o dtbtool
+	rm -f *.o $(PROGNAME)
